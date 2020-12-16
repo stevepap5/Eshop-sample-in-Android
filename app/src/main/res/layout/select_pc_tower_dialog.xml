@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pcTowerDialogMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/pcTowerDialogTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/pcTowerDialogMainLayout"
+        android:text="@string/pc_tower"
+        android:textColor="@color/primary"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"
+        android:layout_margin="10sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/memoryGbTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/pcTowerDialogTextView"
+        android:layout_marginTop="10sp"
+        android:layout_margin="2sp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/memoryGbPcTowerEditText"
+            android:inputType="number"
+            android:maxLength="9"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cpuFrequencyTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/memoryGbTextInputLayout"
+        android:layout_marginTop="10sp"
+        android:layout_margin="2sp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cpuFrequencyPcTowerEditText"
+            android:inputType="numberDecimal"
+            android:maxLength="9"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addToCartPcTowerDialog"
+        app:layout_constraintTop_toBottomOf="@id/cpuFrequencyTextInputLayout"
+        android:text="@string/add_to_cart"
+        android:layout_marginTop="10sp"
+        android:layout_margin="2sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancelButtonPcTowerDialog"
+        app:layout_constraintTop_toBottomOf="@id/addToCartPcTowerDialog"
+        app:layout_constraintBottom_toBottomOf="@id/pcTowerDialogMainLayout"
+        android:layout_margin="2sp"
+        android:text="@string/cancel"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

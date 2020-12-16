@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Acticities.MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/eshopImage"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:contentDescription="@string/eshopimage"
+        android:scaleType="fitXY"
+        android:src="@drawable/eshop"
+        app:layout_constraintTop_toTopOf="@id/mainLayout"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/eshopImage"
+        android:layout_marginTop="100sp">
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/pcTowerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_pc_tower"
+                    android:layout_margin="2sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                     />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/pcScreenButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_pc_screen"
+                    android:layout_margin="2sp"
+                    app:layout_constraintTop_toBottomOf="@id/pcTowerButton"
+                     />
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/personalComputerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_personal_computer"
+                    android:layout_margin="2sp"
+                    app:layout_constraintTop_toBottomOf="@id/pcScreenButton"
+                   />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/workStationButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_workstation"
+                    android:layout_margin="2sp"
+                    app:layout_constraintTop_toBottomOf="@id/personalComputerButton"
+                     />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/goToCardActivityButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cart"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:layout_constraintBottom_toBottomOf="@id/mainLayout"
+        android:layout_margin="2sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

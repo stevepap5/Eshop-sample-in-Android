@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/workstationMainLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/workstationDialogTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/workstationMainLayout"
+        android:text="@string/select_workstation"
+        android:textColor="@color/primary"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/memoryGbWorkstationTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/workstationDialogTextView"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10sp"
+        android:layout_margin="2sp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/memoryGbWorkstaionEditText"
+            android:inputType="number"
+            android:maxLength="9"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cpuFrequencyWorkstationTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/memoryGbWorkstationTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10sp"
+        android:layout_margin="2sp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cpuFrequencyWorkstationEditText"
+            android:inputType="numberDecimal"
+            android:maxLength="9"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pcScreenInchesWorkstationDialogTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cpuFrequencyWorkstationTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10sp"
+        android:layout_margin="2sp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pcScreenWorkstationDialogEditText"
+            android:inputType="number"
+            android:maxLength="10"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hardDiskWorkstationDialogTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/pcScreenInchesWorkstationDialogTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10sp"
+        android:layout_margin="2sp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hardDiskWorkstationDialogEditText"
+            android:inputType="number"
+            android:maxLength="9"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/operatingSystemRadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/hardDiskWorkstationDialogTextInputLayout">
+        <RadioButton android:id="@+id/linuxWorkstation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/linux"
+           />
+        <RadioButton android:id="@+id/windowsWorkstation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/windows"
+           />
+    </RadioGroup>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addToCartWorkstationDialog"
+        app:layout_constraintTop_toBottomOf="@id/operatingSystemRadioGroup"
+        android:text="@string/add_to_cart"
+        android:layout_margin="2sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancelButtonWorkstationDialog"
+        app:layout_constraintTop_toBottomOf="@id/addToCartWorkstationDialog"
+        android:text="@string/cancel"
+        android:layout_margin="2sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

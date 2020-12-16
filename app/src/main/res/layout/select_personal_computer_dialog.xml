@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/personalComputerMainLayout"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/personalComputerDialogTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/personalComputerMainLayout"
+        android:text="@string/select_personal_computer"
+        android:textColor="@color/primary"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/memoryGbPersonalComputerTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/personalComputerDialogTextView"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10sp"
+        android:layout_margin="2sp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/memoryGbPersonalComputerEditText"
+            android:inputType="number"
+            android:maxLength="9"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cpuFrequencyPersonalComputerTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/memoryGbPersonalComputerTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10sp"
+        android:layout_margin="2sp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cpuFrequencyPersonalComputerEditText"
+            android:inputType="numberDecimal"
+            android:maxLength="9"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pcScreenInchesPersonalComputerDialogTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cpuFrequencyPersonalComputerTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10sp"
+        android:layout_margin="2sp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pcScreenPersonalComputerDialogEditText"
+            android:inputType="number"
+            android:maxLength="9"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hardDiskPersonalComputerDialogTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/pcScreenInchesPersonalComputerDialogTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10sp"
+        android:layout_margin="2sp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hardDiskPersonalComputerDialogEditText"
+            android:inputType="number"
+            android:maxLength="9"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addToCartPersonalComputerDialog"
+        app:layout_constraintTop_toBottomOf="@id/hardDiskPersonalComputerDialogTextInputLayout"
+        android:text="@string/add_to_cart"
+        android:layout_margin="2sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancelButtonPersonalComputerDialog"
+        app:layout_constraintTop_toBottomOf="@id/addToCartPersonalComputerDialog"
+        android:text="@string/cancel"
+        android:layout_margin="2sp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
